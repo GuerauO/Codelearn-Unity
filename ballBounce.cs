@@ -16,7 +16,6 @@ public class ballBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "ENEMY")
         {
             transform.SetPositionAndRotation(new Vector3(-2f, 20.0f, 0.0f), Quaternion.identity);
-            rb.velocity = new Vector3(0, 2, 0);
         }
         
         if (collision.gameObject.tag == "END")
