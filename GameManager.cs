@@ -21,4 +21,9 @@ public class GameManager : MonoBehaviour
     {
         puntuacio += punts;
     }
+
+    public void ResetejarPunts()
+    {
+        puntuacio = 0;
+    }
 }
