@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,8 @@ public class PickUpItems : MonoBehaviour
     public GameObject activatingOB;
 
     public GameObject pickupText;
+
+    public Inventory inventari;
 
     public bool inReach;
 
@@ -38,6 +40,8 @@ public class PickUpItems : MonoBehaviour
             pickupOB.SetActive(false);
             activatingOB.SetActive(true);
             pickupText.SetActive(false);
+
+            inventari.item2 = true;
         }
         
     }
