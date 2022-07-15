@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +6,12 @@ public class PickUpKey : MonoBehaviour
 {
     public GameObject keyOB;
     public GameObject invOB;
+    public GameObject invOB_2;
+
     public GameObject pickUpText;
     public AudioSource keySound;
+
+    public Inventory inventari;
 
     public bool inReach;
 
@@ -17,6 +21,8 @@ public class PickUpKey : MonoBehaviour
         inReach = false;
         pickUpText.SetActive(false);
         invOB.SetActive(false);
+        invOB_2.SetActive(false);
+
     }
 
 
@@ -48,6 +54,9 @@ public class PickUpKey : MonoBehaviour
             keyOB.SetActive(false);
             keySound.Play();
             invOB.SetActive(true);
+            invOB_2.SetActive(true);
+
+            inventari.item1 = true;
             pickUpText.SetActive(false);
         }
 
